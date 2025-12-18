@@ -23,6 +23,10 @@ app.get('/sobre', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'sobre.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`Site rodando em: http://localhost:${PORT}`);
-});
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Servidor rodando em: http://localhost:${PORT}`);
+    });
+}
+
+module.exports = app;
