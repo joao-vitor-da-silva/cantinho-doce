@@ -227,7 +227,7 @@ function sendToWhatsApp() {
     }
 
     // 4. Tudo certo! Envia
-    const tel = "5511999999999"; 
+    const tel = "5518997708054"; 
     let msg = `*OLÁ! CONSULTA DE DISPONIBILIDADE* 🎂%0A%0A`;
     msg += `Gostaria de saber se vocês têm agenda para:%0A%0A`;
     msg += `*Tamanho:* ${pedido.tamanho.nome}%0A`;
