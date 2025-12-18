@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Cantinho do Doce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+                <div style="background: var(--primary); color: white; border-radius: 8px; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;">
+                    <i class="bi bi-cake2-fill" style="font-size: 18px;"></i>
+                </div>
+                <span>Cantinho <span style="color: var(--primary); font-style: italic;">do Doce</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/montar">Monte seu Bolo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/sobre">Sobre Nós</a></li>
+                </ul>
+            </div>
+            <a href="https://wa.me/5511999999999" class="btn-whatsapp-nav d-none d-lg-flex">
+                <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="text-center mb-5">
+            <span class="sub-title">NOSSO MENU</span>
+            <h1 class="display-5 fw-bold mb-4">Bolos & Doces</h1>
+            
+            <div class="d-flex justify-content-center gap-2 mt-4 flex-wrap">
+                <button class="btn btn-hero-primary px-4 py-2" style="font-size: 0.9rem;">Todos</button>
+                <button class="btn btn-outline-secondary rounded-pill px-4 py-2 border">Aniversário</button>
+                <button class="btn btn-outline-secondary rounded-pill px-4 py-2 border">Casamento</button>
+                <button class="btn btn-outline-secondary rounded-pill px-4 py-2 border">Infantil</button>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="gallery-card h-100 shadow-sm border">
+                    <img src="https://images.unsplash.com/photo-1588195538326-c5f1f9fa478f?w=500" class="card-img-top" alt="Bolo">
+                    <div class="p-3 text-center">
+                        <h5 class="fw-bold mt-2">Naked Cake Frutas</h5>
+                        <p class="text-muted small">Massa leve com frutas vermelhas</p>
+                        <p class="text-primary fw-bold">A partir de R$ 220,00</p>
+                        <a href="/montar" class="btn btn-sm btn-outline-danger w-100 rounded-pill">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="gallery-card h-100 shadow-sm border">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" class="card-img-top" alt="Bolo">
+                    <div class="p-3 text-center">
+                        <h5 class="fw-bold mt-2">Chocolate Belga</h5>
+                        <p class="text-muted small">Intenso e cremoso</p>
+                        <p class="text-primary fw-bold">A partir de R$ 180,00</p>
+                        <a href="/montar" class="btn btn-sm btn-outline-danger w-100 rounded-pill">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-3">
+                <div class="gallery-card h-100 shadow-sm border">
+                    <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500" class="card-img-top" alt="Bolo">
+                    <div class="p-3 text-center">
+                        <h5 class="fw-bold mt-2">Unicórnio Colorido</h5>
+                        <p class="text-muted small">Temático infantil</p>
+                        <p class="text-primary fw-bold">A partir de R$ 250,00</p>
+                        <a href="/montar" class="btn btn-sm btn-outline-danger w-100 rounded-pill">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-3">
+                <div class="gallery-card h-100 shadow-sm border">
+                    <img src="https://images.unsplash.com/photo-1563729768-39829e6382c7?w=500" class="card-img-top" alt="Bolo">
+                    <div class="p-3 text-center">
+                        <h5 class="fw-bold mt-2">Red Velvet Suave</h5>
+                        <p class="text-muted small">Clássico aveludado</p>
+                        <p class="text-primary fw-bold">A partir de R$ 160,00</p>
+                        <a href="/montar" class="btn btn-sm btn-outline-danger w-100 rounded-pill">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container pb-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                        <div style="background: var(--primary); color: white; border-radius: 8px; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-cake2-fill" style="font-size: 16px;"></i>
+                        </div>
+                        <h4 class="mb-0 footer-logo">Cantinho do Doce</h4>
+                    </div>
+                    <p class="text-muted small" style="line-height: 1.8;">
+                        Confeitaria artesanal especializada em bolos personalizados para todos os momentos especiais da sua vida. Feito com amor.
+                    </p>
+                </div>
+                <div class="col-lg-2 offset-lg-2">
+                    <h6 class="fw-bold mb-3">Links Rápidos</h6>
+                    <a href="/" class="footer-link">Início</a>
+                    <a href="/catalogo" class="footer-link">Catálogo</a>
+                    <a href="/montar" class="footer-link">Monte seu Bolo</a>
+                    <a href="/sobre" class="footer-link">Sobre Nós</a>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-3">Contato</h6>
+                    <p class="mb-2 text-muted small"><i class="bi bi-whatsapp me-2 text-success"></i> (11) 99999-9999</p>
+                    <p class="mb-2 text-muted small"><i class="bi bi-instagram me-2" style="color: #E1306C;"></i> @cantinhodoce</p>
+                    <p class="mb-0 text-muted small"><i class="bi bi-geo-alt me-2 text-danger"></i> Rua das Flores, 123 - São Paulo</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-4 border-top">
+            <small class="text-muted">&copy; 2025 Cantinho do Doce. Todos os direitos reservados.</small>
+        </div>
+    </footer>
+</body>
+</html>
