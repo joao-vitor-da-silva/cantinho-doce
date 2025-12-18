@@ -228,20 +228,28 @@ function sendToWhatsApp() {
 
     // 4. Tudo certo! Envia
     const tel = "5518997708054"; 
-    let msg = `*OLÁ! CONSULTA DE DISPONIBILIDADE* 🎂%0A%0A`;
-    msg += `Gostaria de saber se vocês têm agenda para:%0A%0A`;
-    msg += `*Tamanho:* ${pedido.tamanho.nome}%0A`;
-    msg += `*Massa:* ${pedido.massa.nome}%0A`;
-    msg += `*Recheio:* ${pedido.recheio.nome}%0A`;
-    msg += `*Cobertura:* ${pedido.cobertura.nome}%0A`;
+    
+    // 1. Construa a mensagem usando \n para quebra de linha (fica mais limpo que %0A)
+    let msg = `*OLÁ! CONSULTA DE DISPONIBILIDADE* 🎂\n\n`;
+    msg += `Gostaria de saber se vocês têm agenda para:\n\n`;
+    
+    // Note que removi os %0A manuais e usei \n
+    msg += `*Tamanho:* ${pedido.tamanho.nome}\n`;
+    msg += `*Massa:* ${pedido.massa.nome}\n`;
+    msg += `*Recheio:* ${pedido.recheio.nome}\n`;
+    msg += `*Cobertura:* ${pedido.cobertura.nome}\n`;
+    
     if(pedido.adicionais.length > 0) {
-        msg += `*Adicionais:* ${pedido.adicionais.map(a => a.nome).join(', ')}%0A`;
+        msg += `*Adicionais:* ${pedido.adicionais.map(a => a.nome).join(', ')}\n`;
     }
-    msg += `%0A*Data Pretendida:* ${pedido.data}%0A`;
-    msg += `*Valor Estimado:* ${document.getElementById('total-price').innerText}%0A`;
-    msg += `%0A_Aguardo retorno!_`;
+    
+    msg += `\n*Data Pretendida:* ${pedido.data}\n`;
+    msg += `*Valor Estimado:* ${document.getElementById('total-price').innerText}\n`;
+    msg += `\n_Aguardo retorno!_`;
 
-    window.open(`https://api.whatsapp.com/send?phone=${tel}&text=${msg}`, '_blank');
+    // 2. A CORREÇÃO PRINCIPAL: encodeURIComponent(msg)
+    // Isso garante que acentos, emojis e espaços não quebrem o link
+    window.open(`https://api.whatsapp.com/send?phone=${tel}&text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 // Configuração de Datas
