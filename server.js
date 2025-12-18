@@ -1,10 +1,11 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Vercel injeta a porta automaticamente
 
-// Configuração de arquivos estáticos (CSS, JS, Imagens)
-app.use(express.static('public'));
+// --- CORREÇÃO AQUI ---
+// Usa __dirname para garantir que o Vercel ache a pasta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Rotas das Páginas
 app.get('/', (req, res) => {
@@ -23,9 +24,10 @@ app.get('/sobre', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'sobre.html'));
 });
 
+// Exportação para o Vercel (Necessário)
 if (require.main === module) {
     app.listen(PORT, () => {
-        console.log(`Servidor rodando em: http://localhost:${PORT}`);
+        console.log(`Servidor rodando na porta ${PORT}`);
     });
 }
 
